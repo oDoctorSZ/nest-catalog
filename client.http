@@ -1,0 +1,67 @@
+
+@baseUrl = http://localhost:3333
+@authToken = {{authenticate.response.body.access_token}}
+
+# @name create_account
+POST {{baseUrl}}/accounts
+Content-Type: application/json
+
+{
+  "name": "Diego Fernandes",
+  "email": "duiasdzgous@rocketseat.com.br",
+  "password": "123456"
+}
+
+###
+
+# @name authenticate
+POST {{baseUrl}}/sessions
+Content-Type: application/json
+
+{
+  "email": "duiasdzgous@rocketseat.com.br",
+  "password": "123456"
+}
+
+###
+
+# @name create_movie
+POST {{baseUrl}}/movies
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "title": "Sla slaa slas sla",
+  "releaseYear": 2004,
+  "synopsis": "oaoushdouashdiuajsiduaoisudhuoasbduaysbduoabsduabsiudbaiusdb ok?"
+}
+
+###
+
+# @name list_all_movies
+GET {{baseUrl}}/movies
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name update_movie
+PATCH {{baseUrl}}/movies/f90c732a-665b-417f-82fc-0bdfc159e938
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "title": "Novo Título",
+  "releaseYear": 2002,
+  "synopsis": "Nova sinopse"
+}
+
+###
+
+# @name delete_movie
+DELETE {{baseUrl}}/movies
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "title": "Novo Título"
+}
