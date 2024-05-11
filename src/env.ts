@@ -3,6 +3,7 @@ import { z } from "zod";
 export const envSchema = z.object({
   POSTGRE_HOST: z.string(),
   POSTGRE_PORT: z.coerce.number(),
+  POSTGRE_URL: z.string(),
   POSTGRE_DATABASE: z.string(),
   POSTGRE_USERNAME: z.string(),
   POSTGRE_PASSWORD: z.string(),
