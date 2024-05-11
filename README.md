@@ -15,7 +15,10 @@
    Tenho outros conhecimentos, mas para não deixar esse arquivo muito longo. Por favor, mas ler mais sobre minhas capacidades, leia meu currículo ;)
 
   Para acessar o Swagger use, no caso de rodar localmente: http://localhost:3333/api#/ (3333 é a porta padrão)
-  Leia o código se for testar localmente, pois as chaves private e public estão em RS256 e é necessário criptografar para base64 no caso de uso
+
+  Leia o código se for testar localmente, pois as chaves private e public estão em RS256 e é necessário criptografar para base64 no caso de uso.
+
+  Outro detalhe, eu não gerei as migrations do orm para controle, por que julguei não necessário, mas sei fazer caso precise.
 
   # O deploy foi feito no Render, segue o Link:
   https://nest-catalog.onrender.com
